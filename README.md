@@ -6,11 +6,15 @@ Setting up ubuntu (14.10)
 ====================================================================================================
 
 # Update and upgrade installation
+```
 sudo apt-get update && sudo apt-get upgrade
+```
 
 # Install python software properties
+```
 sudo apt-get install python-software-properties
 sudo apt-get install -y python-software-properties python g++ make
+```
 
 # Install sublime text 3
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
