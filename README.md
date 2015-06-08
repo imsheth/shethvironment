@@ -253,3 +253,106 @@ Include /etc/phpmyadmin/apache.conf
 ```
 
 ###### Take ownership and hange file permissions of webrooot
+
+====================================================================================================
+Installing node.js and sails.js
+====================================================================================================
+
+###### Install nodejs
+```
+sudo apt-get install python-software-properties python g++ make
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install -y build-essential
+```
+
+###### Install sails (May show exit 0 status error, be patient and wait for the prompt to return)
+```
+sudo npm -g --verbose install sails
+```
+
+====================================================================================================
+Bower
+====================================================================================================
+
+##### Installing bower
+```
+npm install -g bower
+```
+
+###### Install packages
+```
+bower install <package>
+```
+
+====================================================================================================
+Ubuntu tricks / commands
+====================================================================================================
+
+###### Popup notification
+```
+sudo apt-get install libnotify-bin
+notify-send 'Title of the message' 'Text of the message'
+notify-send -i /home/sathiya/deal.ico 'Deal success'
+notify-send -u critical -i "notification-message-IM" 'Boss !!' 'Am done with the execution'
+command && notify-send
+```
+
+###### For taking file ownership
+```
+sudo chown -R starscream: /opt/lampp/htdocs/Dropbox/xampp-root
+```
+
+###### For changing file permissions
+```
+sudo chmod -R 777  /opt/lampp/htdocs/Dropbox/xampp-root
+```
+
+###### Start apache2
+```
+sudo /etc/init.d/apache2 start 
+```
+
+###### Stop apache2
+```
+sudo /etc/init.d/apache2 stop   
+```
+
+###### Restart apache2
+```
+sudo /etc/init.d/apache2 restart 
+```
+
+###### Run jasmine tests
+```
+jasmine-node --matchall test/store.test.js
+```
+
+###### To open terminal before login
+```
+^ + Alt + F2
+```
+
+###### To reset unity
+```
+dconf reset -f /org/compiz/
+unity --reset-icons
+```
+
+###### Reinstall Unity in Ubuntu 14.04 to fix system freeze issue
+```
+sudo apt-get update
+sudo apt-get install --reinstall ubuntu-desktop
+sudo apt-get install unity
+sudo shutdown -r now
+```
+
+###### Fixing Unity freeze issue with Nvidia graphics
+```
+sudo apt-get update
+sudo apt-get install --reinstall ubuntu-desktop
+sudo apt-get install unity
+sudo apt-get remove --purge nvidia*
+sudo shutdown -r now
+```
