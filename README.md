@@ -179,6 +179,15 @@ sudo apt-get install mariadb-server
 ```
 
 ====================================================================================================
+Installing mysql [Reference] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04)
+====================================================================================================
+
+###### Install mysql
+```
+sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
+```
+
+====================================================================================================
 Installing php5 and phpmyadmin [Reference] (http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
 ====================================================================================================
 
@@ -195,6 +204,16 @@ sudo apt-get install phpmyadmin
 ###### Answers to prompts
 ###### 1. Web server to reconfigure automatically: answer ‘apache2′.
 ###### 2. Configure database for phpmyadmin with dbconfig-common? – answer ‘NO’.
+
+###### Copy over the the PHPMyAdmin Apache conf file over to the conf-available directory (for mysql)
+```
+sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+```
+
+###### Enable the Apache conf file using a2enconf (for mysql)
+```
+sudo a2enconf phpmyadmin
+```
 
 ====================================================================================================
 Changing the default webroot for apache 2
@@ -278,7 +297,7 @@ Bower
 
 ###### Installing bower
 ```
-npm install -g bower --verbose
+sudo npm install -g bower --verbose
 ```
 
 ###### Interactively create a bower.json with bower init
