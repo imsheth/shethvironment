@@ -116,33 +116,64 @@ sudo apt-get install flashplugin-installer
 ### Skype
 ### Teamviewer
 
-====
-Installing apache2
+====================================================================================================
+Installing apache2 [Reference] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
+====================================================================================================
 
-[Reference] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
-===
-
-# Install apache2
+###### Install apache2
 ```
 sudo apt-get install apache2
 ```
 
-# To prevent Apache from autostart when booting up (Optional)
+###### To prevent Apache from autostart when booting up (Optional)
 ```
 sudo update-rc.d -f apache2 remove
 ```
 
-# To restore Apache back to the autostart list (Optional)
+###### To restore Apache back to the autostart list (Optional)
 ```
 sudo update-rc.d apache2 defaults
 ```
 
-# Enabling mod_rewrite on apache2, for CakePHP (Optional)
+###### Enabling mod_rewrite on apache2, for CakePHP (Optional)
 ```
 sudo a2enmod rewrite
 ```
 
-# Restart the apache
+###### Restart the apache
 ```
 sudo /etc/init.d/apache2 restart
+```
+
+====================================================================================================
+Installing mariadb [Reference] (https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
+====================================================================================================
+
+###### Install the repo manager, if not installed (Optional)
+```
+sudo apt-get install software-properties-common
+```
+
+###### Import the GnuPG signing key
+```
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+```
+
+###### Create new repository file by running the commands below.
+```
+sudo subl /etc/apt/sources.list.d/mariadb.list
+```
+
+###### MariaDB 10.0 repository list - created 2015-01-26 10:51 UTC
+```
+http://mariadb.org/mariadb/repositories/
+
+deb http://mariadb.bytenet.in//repo/10.0/ubuntu utopic main
+deb-src http://mariadb.bytenet.in//repo/10.0/ubuntu utopic main
+```
+
+###### Update system and install mariadb-server
+```
+sudo apt-get update
+sudo apt-get install mariadb-server
 ```
