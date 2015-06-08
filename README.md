@@ -195,3 +195,61 @@ sudo apt-get install phpmyadmin
 ###### Answers to prompts
 ###### 1. Web server to reconfigure automatically: answer ‘apache2′.
 ###### 2. Configure database for phpmyadmin with dbconfig-common? – answer ‘NO’.
+
+====================================================================================================
+Changing the default webroot for apache 2
+====================================================================================================
+
+###### Include the following line in /etc/apache2/apache2.conf 
+```
+Include /etc/phpmyadmin/apache.conf
+```
+
+###### 1. /etc/apache2/sites-enabled/000-default.conf
+
+###### change
+```
+/var/www/html
+```
+
+###### to (folder required to be existing)
+```
+/home/starscream/public_html
+```
+
+###### 2. /etc/apache2/apache2.conf file
+
+###### change
+```
+<Directory /var/www/>
+ Options Indexes FollowSymLinks
+ AllowOverride None
+ Require all granted
+</Directory>
+```
+
+###### to
+```
+<Directory /home/starscream/public_html>
+  Options Indexes FollowSymLinks
+  AllowOverride None
+  Require all granted
+</Directory>
+```
+
+###### 3. Configuration for CakePHP, all following lines too (Optional)
+```
+<Directory />
+    Options FollowSymLinks
+    AllowOverride All
+</Directory>
+
+<Directory /home/starscream/public_html>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order Allow,Deny
+    Allow from all
+</Directory>
+```
+
+###### Take ownership and hange file permissions of webrooot
