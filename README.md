@@ -276,14 +276,33 @@ sudo npm -g --verbose install sails
 Bower
 ====================================================================================================
 
-##### Installing bower
+###### Installing bower
 ```
-npm install -g bower
+npm install -g bower --verbose
 ```
 
-###### Install packages
+###### Interactively create a bower.json with bower init
 ```
-bower install <package>
+bower init
+```
+
+###### Install package and add it to bower.json dependencies
+```
+bower install <package> --save
+```
+
+###### Install package and add it to bower.json devDependencies
+```
+bower install <package> --save-dev
+```
+
+====================================================================================================
+AngularJS
+====================================================================================================
+
+###### Installing angularjs
+```
+bower install angular
 ```
 
 ====================================================================================================
