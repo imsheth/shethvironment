@@ -177,3 +177,21 @@ deb-src http://mariadb.bytenet.in//repo/10.0/ubuntu utopic main
 sudo apt-get update
 sudo apt-get install mariadb-server
 ```
+
+====================================================================================================
+Installing php5 and phpmyadmin [Reference] (http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
+====================================================================================================
+
+###### Install php5
+```
+sudo apt-get install php5 libapache2-mod-php5 php5-mysql
+```
+
+###### Install phpmyadmin
+```
+sudo apt-get install phpmyadmin
+```
+
+###### Answers to prompts
+###### 1. Web server to reconfigure automatically: answer ‘apache2′.
+###### 2. Configure database for phpmyadmin with dbconfig-common? – answer ‘NO’.
