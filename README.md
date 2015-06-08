@@ -115,3 +115,34 @@ sudo apt-get install flashplugin-installer
 ### Chrome 
 ### Skype
 ### Teamviewer
+
+====
+Installing apache2
+
+[Reference] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
+===
+
+# Install apache2
+```
+sudo apt-get install apache2
+```
+
+# To prevent Apache from autostart when booting up (Optional)
+```
+sudo update-rc.d -f apache2 remove
+```
+
+# To restore Apache back to the autostart list (Optional)
+```
+sudo update-rc.d apache2 defaults
+```
+
+# Enabling mod_rewrite on apache2, for CakePHP (Optional)
+```
+sudo a2enmod rewrite
+```
+
+# Restart the apache
+```
+sudo /etc/init.d/apache2 restart
+```
