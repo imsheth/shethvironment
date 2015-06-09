@@ -215,6 +215,28 @@ sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
 sudo a2enconf phpmyadmin
 ```
 
+###### Change default listening port
+
+###### Edit 
+```
+sudo subl /etc/apache2/ports.conf
+```
+
+###### Change 
+```
+Listen 80
+```
+
+###### Edit 
+```
+sudo subl /etc/apache2/sites-enabled/000-default.conf
+```
+
+###### Change 
+```
+Listen 80
+```
+
 ====================================================================================================
 Changing the default webroot for apache 2
 ====================================================================================================
