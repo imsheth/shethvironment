@@ -179,12 +179,17 @@ sudo apt-get install mariadb-server
 ```
 
 ====================================================================================================
-Installing mysql [Reference] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04)
+Installing mysql [Reference1] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Reference2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
 ====================================================================================================
 
 ###### Install mysql
 ```
 sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
+```
+
+###### We need to tell MySQL to generate the directory structure it needs to store its databases and information. We can do this by typing :
+```
+sudo mysql_install_db
 ```
 
 ====================================================================================================
