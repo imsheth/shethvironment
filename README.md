@@ -369,15 +369,27 @@ sudo chmod -R 777  /opt/lampp/htdocs/Dropbox/xampp-root
 ```
 sudo /etc/init.d/apache2 start 
 ```
+or
+```
+sudo service apache2 start
+```
 
 ###### Stop apache2
 ```
 sudo /etc/init.d/apache2 stop   
 ```
+or
+```
+sudo service apache2 stop
+```
 
 ###### Restart apache2
 ```
 sudo /etc/init.d/apache2 restart 
+```
+or
+```
+sudo service apache2 restart
 ```
 
 ###### Run jasmine tests
