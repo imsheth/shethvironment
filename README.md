@@ -382,6 +382,11 @@ notify-send -u critical -i "notification-message-IM" 'Boss !!' 'Am done with the
 command && notify-send
 ```
 
+###### Lock screen
+```
+gnome-screensaver-command --lock
+```
+
 ###### For taking file ownership
 ```
 sudo chown -R starscream: /opt/lampp/htdocs/Dropbox/xampp-root
