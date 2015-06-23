@@ -320,6 +320,49 @@ System start/stop links for /etc/init.d/nginx already exist.
 ###### This just means that it was already configured correctly and that no action was necessary. Either way, your Nginx service is now configured to start up at boot time.
 
 ====================================================================================================
+Changing the default webroot for nginx / adding virtual host/s [Reference] (https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3)
+====================================================================================================
+
+###### Add entry in hosts
+```
+sudo subl /etc/hosts
+
+
+127.0.0.1	localhost
+127.0.1.1	starscream
+127.0.0.1	angular.example.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+```
+
+###### Create virtual host by configuring server block
+```
+sudo subl /etc/nginx/sites-enabled/example
+
+server {
+  listen 80;
+  server_name angular.example.com;
+  root /home/starscream/public_html/example_web;
+  index app/index.html;
+  location /{
+      try_files $uri /app/index.html;
+  }
+}
+```
+
+###### Create a link and reload server
+```
+sudo ln -s example /etc/nginx/sites-available/example
+sudo service nginx reload
+```
+
+
+====================================================================================================
 Installing node.js and sails.js
 ====================================================================================================
 
