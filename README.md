@@ -380,6 +380,11 @@ sudo apt-get install -y build-essential
 sudo npm -g --verbose install sails
 ```
 
+###### Remove PPA
+```
+sudo add-apt-repository --remove ppa:chris-lea/node.js
+```
+
 ====================================================================================================
 Bower
 ====================================================================================================
