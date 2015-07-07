@@ -105,6 +105,13 @@ sudo apt-get install ubuntu-restricted-extras
 sudo apt-get install flashplugin-installer
 ```
 
+# Generate public ssh key
+```
+ssh-keygen -t rsa -b 2048 -C "contact@imsheth.com"
+cd ~/.ssh
+cat id_rsa.pub
+```
+
 # Install via ubuntu software center
 ### Mozilla Firefox
 ### Dropbox
