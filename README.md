@@ -565,3 +565,12 @@ sudo apt-get install unity
 sudo apt-get remove --purge nvidia*
 sudo shutdown -r now
 ```
+
+###### Prettify package for Sublimetext
+
+https://packagecontrol.io/installation
+```
+Ctrl+Shift+P or Cmd+Shift+P in Linux/Windows/OS X
+type install, select Package Control: Install Package
+type prettify, select HTML-CSS-JS Prettify
+```
