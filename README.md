@@ -112,6 +112,14 @@ cd ~/.ssh
 cat id_rsa.pub
 ```
 
+# Install ScudCloud
+```
+sudo apt-add-repository -y ppa:rael-gc/scudcloud
+sudo apt-get update
+sudo apt-get install scudcloud
+sudo nautilus /usr/share/applications/
+```
+
 # Install via ubuntu software center
 ### Mozilla Firefox
 ### Dropbox
