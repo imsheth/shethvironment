@@ -425,6 +425,90 @@ bower install <package> --save-dev
 ```
 
 ====================================================================================================
+Gulp [Reference1](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/) [Reference2](https://markgoodyear.com/2014/01/getting-started-with-gulp/) [Reference3](http://slides.com/contra/gulp#/)
+====================================================================================================
+
+###### Install gulp globally
+```
+sudo npm install --global gulp --verbose
+```
+
+###### Install gulp and your required project dependencies in devDependencies
+```
+sudo npm install --save-dev gulp --verbose
+sudo npm install --save-dev gulp-notify --verbose
+sudo npm install --save-dev gulp-rename --verbose
+sudo npm install --save-dev gulp-stylus --verbose
+sudo npm install --save-dev gulp-uglify --verbose
+```
+
+###### Create a gulpfile.js at the root of your project
+```
+// Sample gulpfile.js
+
+// Load required gulp modules
+var gulp = require('gulp'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    notify = require('gulp-notify'),
+    stylus = require('gulp-stylus');
+
+// Defining gulp task for uglification/minification of .js files
+gulp.task('scripts', function() {
+    return gulp.src('app/main.js')
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/dist/'));
+        // .pipe(notify({
+        //     message: 'Uglification complete !'
+        // }));
+});
+
+// Defining gulp task to get .styl files and render
+gulp.task('styles', function() {
+    return gulp.src('./app/assets/css/*.styl')
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(stylus({
+            compress: true
+        }))
+        .pipe(gulp.dest('./app/assets/css/build'));
+        // .pipe(notify({
+        //     message: 'Minification complete !'
+        // }));
+});
+
+// Watch task watches specified sources for changes and reloads on change
+gulp.task('watch', function() {
+
+    // Watch .js files
+    gulp.watch('app/main.js', ['scripts']);
+
+    // Create LiveReload server
+    livereload.listen();
+
+    // Watch any files in dist/, reload on change
+    gulp.watch(['app/dist/**']).on('change', livereload.changed);
+
+});
+
+// A default task is a gulp that runs when you just run gulp
+gulp.task('default', function() {
+
+    gulp.start('scripts', 'styles');
+
+});
+```
+
+###### Run gulp
+```
+gulp
+```
+
+====================================================================================================
 Grunt
 ====================================================================================================
 
