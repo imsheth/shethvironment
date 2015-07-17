@@ -440,6 +440,7 @@ sudo npm install --save-dev gulp-notify --verbose
 sudo npm install --save-dev gulp-rename --verbose
 sudo npm install --save-dev gulp-stylus --verbose
 sudo npm install --save-dev gulp-uglify --verbose
+sudo npm install --save-dev gulp del --verbose
 ```
 
 ###### Create a gulpfile.js at the root of your project
@@ -451,16 +452,22 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     notify = require('gulp-notify'),
-    stylus = require('gulp-stylus');
+    stylus = require('gulp-stylus'),
+    del = require('del');
+
+// Defining gulp task for performing cleaning of built files
+gulp.task('clean', function(cb) {
+    del(['app/*.min.js', 'app/assets/css/build/**/*.css'], cb)
+});
 
 // Defining gulp task for uglification/minification of .js files
 gulp.task('scripts', function() {
-    return gulp.src('app/main.js')
+    return gulp.src('app/*.js')
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(uglify())
-        .pipe(gulp.dest('app/dist/'));
+        .pipe(gulp.dest('app/'));
         // .pipe(notify({
         //     message: 'Uglification complete !'
         // }));
@@ -481,7 +488,7 @@ gulp.task('styles', function() {
         // }));
 });
 
-// Watch task watches specified sources for changes and reloads on change
+// Defining watch task watches specified sources for changes and reloads on change
 gulp.task('watch', function() {
 
     // Watch .js files
@@ -495,8 +502,8 @@ gulp.task('watch', function() {
 
 });
 
-// A default task is a gulp that runs when you just run gulp
-gulp.task('default', function() {
+// A default task is a gulp that runs when you just run just 'gulp'
+gulp.task('default', ['clean'], function() {
 
     gulp.start('scripts', 'styles');
 
