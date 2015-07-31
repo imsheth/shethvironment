@@ -108,8 +108,8 @@ sudo apt-get install flashplugin-installer
 # Generate public ssh key
 ```
 ssh-keygen -t rsa -b 2048 -C "contact@imsheth.com"
-cd ~/.ssh
-cat id_rsa.pub
+ls ~/.ssh/*.pub
+cat ~/.ssh/id_rsa.pub
 ```
 
 # Install ScudCloud
