@@ -562,6 +562,25 @@ bower install angular
 ```
 
 ====================================================================================================
+Composer
+====================================================================================================
+
+###### Downloading and installing composer
+```
+curl -sS https://getcomposer.org/installer | php
+```
+
+###### Making composer available globally
+```
+mv composer.phar /usr/local/bin/composer
+```
+
+###### Adding to PATH
+```
+PATH=$PATH:/home/starscream/.composer/vendor/bin/
+```
+
+====================================================================================================
 Ubuntu tricks / commands
 ====================================================================================================
 
