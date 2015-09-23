@@ -567,17 +567,44 @@ Composer
 
 ###### Downloading and installing composer
 ```
-curl -sS https://getcomposer.org/installer | php
+sudo curl -sS https://getcomposer.org/installer | php
 ```
 
 ###### Making composer available globally
 ```
-mv composer.phar /usr/local/bin/composer
+sudo mv composer.phar /usr/local/bin/composer
 ```
 
 ###### Adding to PATH
 ```
-PATH=$PATH:/home/starscream/.composer/vendor/bin/
+sudo PATH=$PATH:/home/starscream/.composer/vendor/bin/
+```
+
+###### Installing or updating dependencies
+```
+sudo composer install --verbose
+sudo composer update --verbose
+```
+
+====================================================================================================
+Laravel
+====================================================================================================
+
+###### Enabling/disabling maintenance mode
+```
+php artisan down
+php artisan up
+```
+
+###### Lifting development server and on specific port
+```
+php artisan serve
+php artisan serve --port=8001
+```
+
+###### To publish vendor settings (after updating/installing via composer)
+```
+php artisan vendor:publish
 ```
 
 ====================================================================================================
