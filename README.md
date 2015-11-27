@@ -132,7 +132,7 @@ sudo nautilus /usr/share/applications/
 ### Teamviewer
 
 ====================================================================================================
-Installing apache2 [Reference] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
+Installing apache2 [Credit] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
 ====================================================================================================
 
 ###### Install apache2
@@ -161,7 +161,7 @@ sudo /etc/init.d/apache2 restart
 ```
 
 ====================================================================================================
-Installing mariadb [Reference] (https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
+Installing mariadb [Credit] (https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
 ====================================================================================================
 
 ###### Install the repo manager, if not installed (Optional)
@@ -194,7 +194,7 @@ sudo apt-get install mariadb-server
 ```
 
 ====================================================================================================
-Installing mysql [Reference1] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Reference2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
+Installing mysql [Credit1] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
 ====================================================================================================
 
 ###### Install mysql
@@ -208,7 +208,7 @@ sudo mysql_install_db
 ```
 
 ====================================================================================================
-Installing php5 and phpmyadmin [Reference] (http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
+Installing php5 and phpmyadmin [Credit] (http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
 ====================================================================================================
 
 ###### Install php5
@@ -316,7 +316,7 @@ Include /etc/phpmyadmin/apache.conf
 ###### Take ownership and hange file permissions of webrooot
 
 ====================================================================================================
-Installing nginx [Reference] (https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
+Installing nginx [Credit] (https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
 ====================================================================================================
 
 ###### Install nginx
@@ -335,7 +335,7 @@ System start/stop links for /etc/init.d/nginx already exist.
 ###### This just means that it was already configured correctly and that no action was necessary. Either way, your Nginx service is now configured to start up at boot time.
 
 ====================================================================================================
-Changing the default webroot for nginx / adding virtual host/s [Reference] (https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3)
+Changing the default webroot for nginx / adding virtual host/s [Credit] (https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3)
 ====================================================================================================
 
 ###### Add entry in hosts
@@ -401,6 +401,93 @@ sudo add-apt-repository --remove ppa:chris-lea/node.js
 ```
 
 ====================================================================================================
+Installing ionic framework for x68_64 [Credit](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/)
+====================================================================================================
+
+###### Add i386 architecture
+```
+sudo dpkg --add-architecture i386
+```
+
+###### Android SDK requires some x86 architecture libraries even on x64 system
+```
+sudo apt-get install -qq -y libc6:i386 libgcc1:i386 libstdc++6:i386 libz1:i386
+```
+
+###### Update and upgrade installation
+```
+sudo apt-get update && sudo apt-get upgrade
+```
+
+###### Download latest Android Linux SDK for x64 as of 26-11-2015 to desktop
+```
+http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+```
+
+###### Rename downloaded zip to android-sdk.tgz
+
+###### Change pwd to desktop
+```
+cd ~/Desktop
+```
+
+###### Unzip, extract, from Android SDK archive file to /opt
+```
+sudo tar zxf "android-sdk.tgz" -C "/opt"
+```
+
+###### Change pwd to /opt and rename folder
+```
+cd "/opt" && sudo  mv "android-sdk-linux" "android-sdk"
+```
+
+###### Set folder permissions and ownership
+```
+cd "/opt" && sudo chown root:root "android-sdk" -R
+cd "$INSTALL_PATH" && sudo chmod 777 "android-sdk" -R
+```
+
+###### Change to HOME
+```
+cd ~/
+```
+
+###### Add Android and NPM paths to the profile to preserve settings on boot
+```
+echo "export PATH=\$PATH:/opt/android-sdk/tools" >> ".profile"
+echo "export PATH=\$PATH:/opt/android-sdk/platform-tools" >> ".profile"
+echo "export PATH=\$PATH:/usr/bin/node/bin" >> ".profile"
+```
+
+###### Add Android and NPM paths to the temporary user path to complete installation
+```
+export PATH=$PATH:/opt/android-sdk/tools
+export PATH=$PATH:/opt/android-sdk/platform-tools
+export PATH=$PATH:/usr/bin/node/bin
+```
+
+###### Install JDK and Apache Ant
+```
+sudo apt-get -qq -y install default-jdk ant --verbose
+```
+
+###### Set JAVA_HOME based on the default OpenJDK installed
+```
+echo "export JAVA_HOME=/usr/lib/jvm" >> ".profile"
+```
+
+###### Install Apache Cordova and Ionic Framework
+```
+sudo npm install -g cordova --verbose
+sudo npm install -g ionic --verbose
+```
+
+###### Reboot, and install platform tools
+```
+android
+```
+
+====================================================================================================
 Bower
 ====================================================================================================
 
@@ -425,7 +512,7 @@ bower install <package> --save-dev
 ```
 
 ====================================================================================================
-Gulp [Reference1](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/) [Reference2](https://markgoodyear.com/2014/01/getting-started-with-gulp/) [Reference3](http://slides.com/contra/gulp#/)
+Gulp [Credit1](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/) [Credit2](https://markgoodyear.com/2014/01/getting-started-with-gulp/) [Credit3](http://slides.com/contra/gulp#/)
 ====================================================================================================
 
 ###### Install gulp globally
