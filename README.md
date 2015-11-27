@@ -390,6 +390,13 @@ sudo apt-get install nodejs
 sudo apt-get install -y build-essential
 ```
 
+###### Install nodejs
+```
+sudo apt-get install python-software-properties python g++ make
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
 ###### Install sails (May show exit 0 status error, be patient and wait for the prompt to return)
 ```
 sudo npm -g --verbose install sails
