@@ -408,7 +408,7 @@ sudo add-apt-repository --remove ppa:chris-lea/node.js
 ```
 
 ====================================================================================================
-Installing ionic framework for x68_64 [Credit](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/)
+Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2] (http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3] (http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
 ====================================================================================================
 
 ###### Add i386 architecture
@@ -478,9 +478,14 @@ export PATH=$PATH:/usr/bin/node/bin
 sudo apt-get -qq -y install default-jdk ant --verbose
 ```
 
+##### If java is properly installed you can find it's location, by using the following command (Don't forget to remove bin/java from the end of the path while putting it into JAVA_HOME)
+```
+readlink -f $(which java)
+```
+
 ###### Set JAVA_HOME based on the default OpenJDK installed
 ```
-echo "export JAVA_HOME=/usr/lib/jvm" >> ".profile"
+echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> ".profile"
 ```
 
 ###### Install Apache Cordova and Ionic Framework
