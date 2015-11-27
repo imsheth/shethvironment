@@ -483,9 +483,17 @@ sudo apt-get -qq -y install default-jdk ant --verbose
 readlink -f $(which java)
 ```
 
-###### Set JAVA_HOME based on the default OpenJDK installed
+###### Set JAVA_HOME and PATH based on the default OpenJDK installed
 ```
-echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> ".profile"
+echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> ".profile"
+echo "export PATH=\$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin" >> ".profile"
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin
+```
+
+###### Add JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64" to /etc/environment 
+```
+sudo nano /etc/environment
 ```
 
 ###### Install Apache Cordova and Ionic Framework
