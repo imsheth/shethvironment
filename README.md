@@ -407,6 +407,23 @@ sudo npm -g --verbose install sails
 sudo add-apt-repository --remove ppa:chris-lea/node.js
 ```
 
+###### Create a new app
+```
+sails new testProject
+```
+
+###### Lift the server (serves at http://localhost:1337/ by default)
+```
+cd testProject
+sails lift
+```
+
+###### Generate a REST API (serves at http://localhost:1337/user by default) 
+```
+sails generate api user
+sails lift
+```
+
 ====================================================================================================
 Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2] (http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3] (http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
 ====================================================================================================
