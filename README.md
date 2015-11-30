@@ -529,6 +529,14 @@ sudo npm install -g ionic --verbose
 android
 ```
 
+###### Creating sample app
+```
+ionic start ExampleProject blank
+cd ExampleProject
+ionic platform add android
+ionic build android
+```
+
 ====================================================================================================
 Bower
 ====================================================================================================
