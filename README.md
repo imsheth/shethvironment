@@ -424,6 +424,11 @@ sails generate api user
 sails lift
 ```
 
+###### If npm fails installing modules
+```
+sudo rm -r node_modules && npm install
+```
+
 ====================================================================================================
 Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2] (http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3] (http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
 ====================================================================================================
