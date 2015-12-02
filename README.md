@@ -772,6 +772,11 @@ sudo chown -R starscream: /opt/lampp/htdocs/Dropbox/xampp-root
 sudo chmod -R 777  /opt/lampp/htdocs/Dropbox/xampp-root
 ```
 
+###### For changing .pem file permissions
+```
+chmod 400 mykeyfile.pem
+```
+
 ###### Start apache2
 ```
 sudo /etc/init.d/apache2 start 
