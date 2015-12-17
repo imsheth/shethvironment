@@ -853,3 +853,15 @@ Ctrl+Shift+P or Cmd+Shift+P in Linux/Windows/OS X
 type install, select Package Control: Install Package
 type prettify, select HTML-CSS-JS Prettify
 ```
+
+###### Crontab
+
+# List
+```
+crontab -l
+```
+
+# Edit
+```
+crontab -e
+```
