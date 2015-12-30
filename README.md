@@ -745,6 +745,35 @@ php artisan vendor:publish
 ```
 
 ====================================================================================================
+Couchdb [Credit1](http://devgirl.org/2014/12/30/sync-data-using-pouchdb-in-your-ionic-framework-app/) [Credit2](https://github.com/apache/couchdb-fauxton)
+====================================================================================================
+
+###### Install couchdb
+```
+sudo apt-get install couchdb
+```
+
+###### Enable CORS (nodejs required)
+```
+sudo npm install -g add-cors-to-couchdb
+add-cors-to-couchdb
+```
+
+###### As a root user, edit /etc/couchdb/local.ini and uncomment the bind_address line.  Also change 127.0.0.1 to 0.0.0.0.  Now everyone can access the database.
+
+###### Access via futon
+```
+http://localhost:5984/_utils/
+```
+
+###### Install fauxton
+```
+sudo npm install -g fauxton
+fauxton
+fauxton --port=8001
+```
+
+====================================================================================================
 Ubuntu tricks / commands
 ====================================================================================================
 
