@@ -760,6 +760,9 @@ add-cors-to-couchdb
 ```
 
 ###### As a root user, edit /etc/couchdb/local.ini and uncomment the bind_address line.  Also change 127.0.0.1 to 0.0.0.0.  Now everyone can access the database.
+```
+sudo subl /etc/couchdb/local.ini
+```
 
 ###### Access via futon
 ```
