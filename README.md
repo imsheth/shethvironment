@@ -776,6 +776,13 @@ fauxton
 fauxton --port=8001
 ```
 
+###### Start/Stop/Restart couchdb
+```
+sudo service couchdb start
+sudo service couchdb stop
+sudo service couchdb restart
+```
+
 ====================================================================================================
 Ubuntu tricks / commands
 ====================================================================================================
