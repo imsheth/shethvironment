@@ -125,11 +125,18 @@ sudo nautilus /usr/share/applications/
 ### Dropbox
 ### VLC
 ### XBMC
+### Skype
+
+# Fix Skype [Credit] (http://askubuntu.com/questions/286233/how-to-add-a-skype-indicator/286436#286436)
+### To fix skype missing indicator in tray
+```
+sudo apt-get install sni-qt:i386
+```
 
 # Install after downloading from website
 ### Chrome 
-### Skype
 ### Teamviewer
+
 
 ====================================================================================================
 Installing apache2 [Credit] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
