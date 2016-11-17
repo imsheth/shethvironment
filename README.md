@@ -787,6 +787,51 @@ sudo service couchdb restart
 Ubuntu tricks / commands
 ====================================================================================================
 
+###### Environment Variables [Credit] (https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.profile)
+export EDITOR=nano
+
+printenv
+printenv TERM
+echo $TERM
+
+export LC_ALL=
+unset LC_ALL
+
+It is also possible to use the "-n" switch to the export command in order to un-export an environment variable and therefore demote it to become a shell variable while preserving its value.
+export -n LC_ALL
+
+Session-wide environment variables
+Suitable files for environment variable settings that should affect just a particular user (rather than the system as a whole) are ~/.pam_environment and ~/.profile. After having edited one of those files, you should re-login in order to initialize the variables.
+
+~/.profile
+In this file you can also place environment variable assignments, since it gets executed automatically by the DisplayManager during the start-up process desktop session as well as by the login shell when one logs in from the textual console. This is a ~/.profile equivalent of the above example:
+export FOO=bar
+export PATH="$PATH:$HOME/MyPrograms"
+
+Shell config files such as ~/.bashrc, ~/.bash_profile, and ~/.bash_login are often suggested for setting environment variables. While this may work on Bash shells for programs started from the shell, variables set in those files are not available by default to programs started from the graphical environment in a desktop session.
+
+System-wide environment variables
+A suitable file for environment variable settings that affect the system as a whole (rather than just a particular user) is /etc/environment. An alternative is to create a file for the purpose in the /etc/profile.d directory.
+
+/etc/environment
+
+This file is specifically meant for system-wide environment variable settings. It is not a script file, but rather consists of assignment expressions, one per line.
+
+
+FOO=bar
+Note: Variable expansion does not work in /etc/environment.
+
+/etc/profile.d/*.sh
+
+Files with the .sh extension in the /etc/profile.d directory get executed whenever a bash login shell is entered (e.g. when logging in from the console or over ssh), as well as by the DisplayManager when the desktop session loads.
+
+You can for instance create the file /etc/profile.d/myenvvars.sh and set variables like this:
+
+
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0
+export PATH=$PATH:$JAVA_HOME/bin
+
+
 ###### Popup notification
 ```
 sudo apt-get install libnotify-bin
@@ -891,6 +936,12 @@ https://packagecontrol.io/installation
 Ctrl+Shift+P or Cmd+Shift+P in Linux/Windows/OS X
 type install, select Package Control: Install Package
 type prettify, select HTML-CSS-JS Prettify
+type prettify, select GitGutter
+type prettify, select SideBarEnhancements
+type prettify, select AutoFileName
+type prettify, select BracketHighlighter
+type prettify, select DocBlockr
+type prettify, select Babel
 ```
 
 ###### Crontab
