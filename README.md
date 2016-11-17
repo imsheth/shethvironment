@@ -112,24 +112,52 @@ ls ~/.ssh/*.pub
 cat ~/.ssh/id_rsa.pub
 ```
 
-# Install ScudCloud
+# Install Google Chrome [Credit] (http://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line/79284#79284)
+### 64 bit
 ```
-sudo apt-add-repository -y ppa:rael-gc/scudcloud
-sudo apt-get update
-sudo apt-get install scudcloud
-sudo nautilus /usr/share/applications/
+sudo apt-get install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 ```
+
+### 32 bit
+```
+sudo apt-get install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+sudo dpkg -i google-chrome*.deb
+```
+
+### If error messages pop up then run the command
+```
+sudo apt-get install -f
+sudo dpkg -i google-chrome*.deb
+```
+
+### To start the browser
+```
+google-chrome
+```
+
+### This installs a needed library for Google Chrome, then downloads the latest version of Chrome to a temporary directory and installs it
+### During the installation a PPA is added to your system so that Google Chrome receives the latest updates whenever you check for system updates
+
 
 # Install via ubuntu software center
 ### Mozilla Firefox
 ### Dropbox
 ### VLC
 ### XBMC
+### Skype
+
+# Fix Skype [Credit] (http://askubuntu.com/questions/286233/how-to-add-a-skype-indicator/286436#286436)
+### To fix skype missing indicator in tray
+```
+sudo apt-get install sni-qt:i386
+```
 
 # Install after downloading from website
-### Chrome 
-### Skype
 ### Teamviewer
+
 
 ====================================================================================================
 Installing apache2 [Credit] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
