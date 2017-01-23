@@ -235,6 +235,11 @@ sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
 sudo mysql_install_db
 ```
 
+###### All running threads (in mysql)
+```
+mysql > show process list;
+```
+
 ====================================================================================================
 Installing php5 and phpmyadmin [Credit] (http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
 ====================================================================================================
@@ -982,4 +987,32 @@ crontab -l
 # Edit
 ```
 crontab -e
+```
+
+###### SSH Tunneling [Credit] (http://www.revsys.com/writings/quicktips/ssh-tunnel.html)
+
+# Multiport tunneling (-4 required to force IPv4 - useful for RDP, -L 23305:localhost:3305 is in the form of -L local-port:host:remote-port, -i for private key)
+```
+ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306  starscream@127.0.0.1
+ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306 -i private_key.pem starscream@127.0.0.1
+```
+
+###### Disk commands [Credit1] (https://en.wikipedia.org/wiki/Df_%28Unix%29) [Credit2] (https://en.wikipedia.org/wiki/Du_%28Unix%29)
+
+# Free space (Display in KB, MB, or GB)
+```
+df -h
+```
+
+
+# Usage (The weight (size) of subdirectories under the root directory (-d 1, trailing /) with a sum total at the end (-c), all displayed in human-readable format (-h) without traversing into other filesystems (-x). Useful when /var /tmp or other directories are on separate storage from the root directory:)
+```
+du --max-depth=1 -c -h
+```
+
+###### Secure Copy
+
+# Copy file from server
+```
+sudo scp starscream@127.0.0.1:/data/filetobecopied.txt /home/Desktop/
 ```
