@@ -1016,3 +1016,30 @@ du --max-depth=1 -c -h
 ```
 sudo scp starscream@127.0.0.1:/data/filetobecopied.txt /home/Desktop/
 ```
+
+###### Screen [Credit1] (http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) [Credit2] (http://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
+
+# Installation
+```
+sudo apt-get install screen
+```
+
+# List all screens
+```
+screen -ls
+```
+
+# Create a new screen
+```
+screen -S foo
+```
+
+# Reattach screen
+```
+screen -r foo
+```
+
+# Detach screen
+```
+Keypress = Ctrl A D
+```
