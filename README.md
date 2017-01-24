@@ -163,6 +163,21 @@ sudo apt-get install sni-qt:i386
 Installing apache2 [Credit] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
 ====================================================================================================
 
+###### Install Java Development Kit [Credit] (http://stackoverflow.com/a/14788468)
+
+# Installation
+```
+sudo apt-get install openjdk-7-jdk
+```
+
+# Set variables
+```
+echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> ".profile"
+echo "export PATH=\$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin" >> ".profile"
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin
+```
+
 ###### Install apache2
 ```
 sudo apt-get install apache2
