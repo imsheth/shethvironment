@@ -148,6 +148,7 @@ google-chrome
 ### VLC
 ### XBMC
 ### Skype
+### pdfsam
 
 # Fix Skype [Credit] (http://askubuntu.com/questions/286233/how-to-add-a-skype-indicator/286436#286436)
 ### To fix skype missing indicator in tray
@@ -1120,7 +1121,7 @@ screen -r foo
 Keypress = Ctrl A D
 ```
 
-# Finding and deleting files [Credit1] (http://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of-a-specific-extension-in-the-current-di)
+# Finding and deleting files [Credit] (http://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of-a-specific-extension-in-the-current-di)
 
 ###### Delete all files with a specific extension (e.g. .bak) from current directory and all subfolders (Also, make sure that -delete is the last argument in your command. If you put it before the -name *.bak argument, it will delete everything.)
 ```
