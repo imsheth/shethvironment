@@ -838,19 +838,45 @@ Infinidb export database to remote server
 ###### Generate sql dump on source server
 ```
 mysqldump  --set-gtid-purged=OFF --user=root --host=localhost --protocol=tcp --port=3307 --default-character-set=utf8 --skip-triggers "dbtoexport" > /pathtoexportlocation/dbtoexport.sql
-
 ```
 
 ###### Compress file on source server
 ```
 tar -zcvf dbtoexport.tar.gz dbtoexport.sql
-
 ```
 
 ###### Get compressed file on destination server via scp
 ```
 scp  user@127.0.0.1:/pathtoexportlocation/dbtoexport.tar.gz /pathtoimportlocation
+```
 
+###### Decompress file on destination server
+```
+tar -zxvf dbtoexport.tar.gz
+```
+
+###### Import into database (assuming dbtoexport exists and is empty)
+```
+idbmysql  dbtoexport < dbtoexport.sql
+```
+
+====================================================================================================
+MySQL export database to remote server
+====================================================================================================
+
+###### Generate sql dump on source server
+```
+mysqldump  --set-gtid-purged=OFF --user=root --host=localhost --protocol=tcp --port=3306 --password --default-character-set=utf8 --skip-triggers "dbtoexport" > /pathtoexportlocation/dbtoexport.sql
+```
+
+###### Compress file on source server
+```
+tar -zcvf dbtoexport.tar.gz dbtoexport.sql
+```
+
+###### Get compressed file on destination server via scp
+```
+scp  user@127.0.0.1:/pathtoexportlocation/dbtoexport.tar.gz /pathtoimportlocation
 ```
 
 ###### Decompress file on destination server
@@ -861,10 +887,9 @@ tar -zxvf dbtoexport.tar.gz
 
 ###### Import into database (assuming dbtoexport exists and is empty)
 ```
-idbmysql  dbtoexport < dbtoexport.sql
+mysql -u root -p dbtoexport < dbtoexport.sql
 
 ```
-
 
 
 ====================================================================================================
