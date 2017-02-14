@@ -1053,69 +1053,81 @@ type prettify, select DocBlockr
 type prettify, select Babel
 ```
 
-###### Crontab
+# Crontab
 
-# List
+###### List
 ```
 crontab -l
 ```
 
-# Edit
+###### Edit
 ```
 crontab -e
 ```
 
-###### SSH Tunneling [Credit] (http://www.revsys.com/writings/quicktips/ssh-tunnel.html)
+# SSH Tunneling [Credit] (http://www.revsys.com/writings/quicktips/ssh-tunnel.html)
 
-# Multiport tunneling (-4 required to force IPv4 - useful for RDP, -L 23305:localhost:3305 is in the form of -L local-port:host:remote-port, -i for private key)
+###### Multiport tunneling (-4 required to force IPv4 - useful for RDP, -L 23305:localhost:3305 is in the form of -L local-port:host:remote-port, -i for private key)
 ```
 ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306  starscream@127.0.0.1
 ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306 -i private_key.pem starscream@127.0.0.1
 ```
 
-###### Disk commands [Credit1] (https://en.wikipedia.org/wiki/Df_%28Unix%29) [Credit2] (https://en.wikipedia.org/wiki/Du_%28Unix%29)
+# Disk commands [Credit1] (https://en.wikipedia.org/wiki/Df_%28Unix%29) [Credit2] (https://en.wikipedia.org/wiki/Du_%28Unix%29)
 
-# Free space (Display in KB, MB, or GB)
+###### Free space (Display in KB, MB, or GB)
 ```
 df -h
 ```
 
 
-# Usage (The weight (size) of subdirectories under the root directory (-d 1, trailing /) with a sum total at the end (-c), all displayed in human-readable format (-h) without traversing into other filesystems (-x). Useful when /var /tmp or other directories are on separate storage from the root directory:)
+###### Usage (The weight (size) of subdirectories under the root directory (-d 1, trailing /) with a sum total at the end (-c), all displayed in human-readable format (-h) without traversing into other filesystems (-x). Useful when /var /tmp or other directories are on separate storage from the root directory:)
 ```
 du --max-depth=1 -c -h
 ```
 
-###### Secure Copy
+# Secure Copy
 
-# Copy file from server
+###### Copy file from server
 ```
 sudo scp starscream@127.0.0.1:/data/filetobecopied.txt /home/Desktop/
 ```
 
-###### Screen [Credit1] (http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) [Credit2] (http://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
+# Screen [Credit1] (http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) [Credit2] (http://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
 
-# Installation
+###### Installation
 ```
 sudo apt-get install screen
 ```
 
-# List all screens
+###### List all screens
 ```
 screen -ls
 ```
 
-# Create a new screen
+###### Create a new screen
 ```
 screen -S foo
 ```
 
-# Reattach screen
+###### Reattach screen
 ```
 screen -r foo
 ```
 
-# Detach screen
+###### Detach screen
 ```
 Keypress = Ctrl A D
+```
+
+# Finding and deleting files [Credit1] (http://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of-a-specific-extension-in-the-current-di)
+
+###### Delete all files with a specific extension (e.g. .bak) from current directory and all subfolders (Also, make sure that -delete is the last argument in your command. If you put it before the -name *.bak argument, it will delete everything.)
+```
+find . -name "*.bak" -type f -delete
+```
+
+###### To find/see exactly which files you will remove
+```
+find . -name "*.bak" -type f
 ```
