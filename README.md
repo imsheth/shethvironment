@@ -1134,8 +1134,7 @@ find . -name "*.bak" -type f
 ```
 
 # Safely uninstall ubuntu from windows dual boot PC [Credit] (http://www.makeuseof.com/tag/how-to-safely-uninstall-ubuntu-in-windows-dual-boot-environment/)
-Boot from Windows CD/DVD and choose “Repair” when it shows up.
-Choose command prompt on the resulting screen and run the following two commands:
+###### Boot from Windows CD/DVD and choose “Repair” when it shows up. Choose command prompt on the resulting screen and run the following two commands:
 ```
 bootrec /fixmbr
 bootrec /fixboot
