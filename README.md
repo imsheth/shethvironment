@@ -157,7 +157,7 @@ sudo apt-get install sni-qt:i386
 ```
 
 # Install after downloading from website
-### Teamviewer
+### [Teamviewer] (https://www.teamviewer.com/en/download/linux/)
 ### [GitKraken] (https://www.gitkraken.com/download)
 
 
