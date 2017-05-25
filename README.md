@@ -873,7 +873,7 @@ mysql -u root -p dbtoexport < dbtoexport.sql
 
 ```
 
-# Ubuntu tricks / commands
+# Ubuntu tricks / commands [Master Reference](https://github.com/Idnan/bash-guide)
 
 ###### Environment Variables [Credit](https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.profile)
 export EDITOR=nano
