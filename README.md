@@ -17,10 +17,28 @@ sudo apt-get install -y python-software-properties python g++ make
 ```
 
 # Install sublime text 3
+
+###### Installation
+
 ```
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-get update
 sudo apt-get install sublime-text-installer
+```
+
+###### Prettify package for Sublimetext
+
+https://packagecontrol.io/installation
+```
+Ctrl+Shift+P or Cmd+Shift+P in Linux/Windows/OS X
+type install, select Package Control: Install Package
+type prettify, select HTML-CSS-JS Prettify
+type prettify, select GitGutter
+type prettify, select SideBarEnhancements
+type prettify, select AutoFileName
+type prettify, select BracketHighlighter
+type prettify, select DocBlockr
+type prettify, select Babel
 ```
 
 # Install gufw
@@ -160,19 +178,14 @@ sudo apt-get install sni-qt:i386
 ### [Teamviewer](https://www.teamviewer.com/en/download/linux/)
 ### [GitKraken](https://www.gitkraken.com/download)
 
+# Install Java Development Kit [Credit](http://stackoverflow.com/a/14788468)
 
-
-Installing apache2 [Credit](http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
-
-
-###### Install Java Development Kit [Credit](http://stackoverflow.com/a/14788468)
-
-# Installation
+###### Installation
 ```
 sudo apt-get install openjdk-7-jdk
 ```
 
-# Set variables
+###### Set variables
 ```
 echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> ".profile"
 echo "export PATH=\$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin" >> ".profile"
@@ -180,7 +193,8 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin
 ```
 
-###### Install apache2
+# Installing apache2 [Credit](http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
+
 ```
 sudo apt-get install apache2
 ```
@@ -206,8 +220,7 @@ sudo /etc/init.d/apache2 restart
 ```
 
 
-Installing mariadb [Credit](https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
-
+# Installing mariadb [Credit](https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
 
 ###### Install the repo manager, if not installed (Optional)
 ```
@@ -238,9 +251,7 @@ sudo apt-get update
 sudo apt-get install mariadb-server
 ```
 
-
-Installing mysql [Credit1](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
-
+# Installing mysql [Credit1](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
 
 ###### Install mysql
 ```
@@ -257,9 +268,7 @@ sudo mysql_install_db
 mysql > show process list;
 ```
 
-
-Installing php5 and phpmyadmin [Credit](http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
-
+# Installing php5 and phpmyadmin [Credit](http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
 
 ###### Install php5
 ```
@@ -365,9 +374,7 @@ Include /etc/phpmyadmin/apache.conf
 
 ###### Take ownership and hange file permissions of webrooot
 
-
-Installing nginx [Credit](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
-
+# Installing nginx [Credit](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
 
 ###### Install nginx
 ```
@@ -426,10 +433,7 @@ sudo ln -s example /etc/nginx/sites-available/example
 sudo service nginx reload
 ```
 
-
-
-Installing node.js and sails.js
-
+# Installing node.js and sails.js
 
 ###### Install nodejs
 ```
@@ -479,9 +483,7 @@ sails lift
 sudo rm -r node_modules && npm install
 ```
 
-
-Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2](http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3](http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
-
+# Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2](http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3](http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
 
 ###### Add i386 architecture
 ```
@@ -587,9 +589,7 @@ ionic platform add android
 ionic build android
 ```
 
-
-Bower
-
+# Bower
 
 ###### Installing bower
 ```
@@ -611,9 +611,7 @@ bower install <package> --save
 bower install <package> --save-dev
 ```
 
-
-Gulp [Credit1](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/) [Credit2](https://markgoodyear.com/2014/01/getting-started-with-gulp/) [Credit3](http://slides.com/contra/gulp#/)
-
+# Gulp [Credit1](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/) [Credit2](https://markgoodyear.com/2014/01/getting-started-with-gulp/) [Credit3](http://slides.com/contra/gulp#/)
 
 ###### Install gulp globally
 ```
@@ -702,27 +700,21 @@ gulp.task('default', ['clean'], function() {
 gulp
 ```
 
-
-Grunt
-
+# Grunt
 
 ###### Install grunt cli
 ```
 sudo npm install -g grunt-cli --verbose
 ```
 
-
-Yeoman
-
+# Yeoman
 
 ###### Install yeoman
 ```
 sudo npm install -g yo --verbose
 ```
 
-
-Stylus
-
+# Stylus
 
 ###### Install stylus
 ```
@@ -739,18 +731,14 @@ stylus -c file.styl
 stylus file.styl
 ```
 
-
-AngularJS
-
+# AngularJS
 
 ###### Installing angularjs
 ```
 bower install angular
 ```
 
-
-Composer
-
+# Composer
 
 ###### Downloading and installing composer
 ```
@@ -773,9 +761,7 @@ sudo composer install --verbose
 sudo composer update --verbose
 ```
 
-
-Laravel
-
+# Laravel
 
 ###### Enabling/disabling maintenance mode
 ```
@@ -794,9 +780,7 @@ php artisan serve --port=8001
 php artisan vendor:publish
 ```
 
-
-Couchdb [Credit1](http://devgirl.org/2014/12/30/sync-data-using-pouchdb-in-your-ionic-framework-app/) [Credit2](https://github.com/apache/couchdb-fauxton)
-
+# Couchdb [Credit1](http://devgirl.org/2014/12/30/sync-data-using-pouchdb-in-your-ionic-framework-app/) [Credit2](https://github.com/apache/couchdb-fauxton)
 
 ###### Install couchdb
 ```
@@ -833,9 +817,7 @@ sudo service couchdb stop
 sudo service couchdb restart
 ```
 
-
-Infinidb export database to remote server
-
+# Infinidb export database to remote server
 
 ###### Generate sql dump on source server
 ```
@@ -862,9 +844,7 @@ tar -zxvf dbtoexport.tar.gz
 idbmysql  dbtoexport < dbtoexport.sql
 ```
 
-
-MySQL export database to remote server
-
+# MySQL export database to remote server
 
 ###### Generate sql dump on source server
 ```
@@ -893,10 +873,7 @@ mysql -u root -p dbtoexport < dbtoexport.sql
 
 ```
 
-
-
-Ubuntu tricks / commands
-
+# Ubuntu tricks / commands
 
 ###### Environment Variables [Credit](https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.profile)
 export EDITOR=nano
@@ -1038,21 +1015,6 @@ sudo apt-get install --reinstall ubuntu-desktop
 sudo apt-get install unity
 sudo apt-get remove --purge nvidia*
 sudo shutdown -r now
-```
-
-###### Prettify package for Sublimetext
-
-https://packagecontrol.io/installation
-```
-Ctrl+Shift+P or Cmd+Shift+P in Linux/Windows/OS X
-type install, select Package Control: Install Package
-type prettify, select HTML-CSS-JS Prettify
-type prettify, select GitGutter
-type prettify, select SideBarEnhancements
-type prettify, select AutoFileName
-type prettify, select BracketHighlighter
-type prettify, select DocBlockr
-type prettify, select Babel
 ```
 
 # Crontab
