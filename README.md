@@ -1003,11 +1003,6 @@ sudo service nginx stop
 sudo service nginx reload
 ```
 
-###### Run jasmine tests
-```
-jasmine-node --matchall test/store.test.js
-```
-
 ###### To open terminal before login
 ```
 ^ + Alt + F2
@@ -1034,6 +1029,11 @@ sudo apt-get install --reinstall ubuntu-desktop
 sudo apt-get install unity
 sudo apt-get remove --purge nvidia*
 sudo shutdown -r now
+```
+
+###### Redirecting stderr and stdout to files
+```
+node --max_old_space_size=8192  app.js 2>/path/error.log > /path/console.log
 ```
 
 ### Crontab
