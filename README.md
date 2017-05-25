@@ -112,7 +112,7 @@ ls ~/.ssh/*.pub
 cat ~/.ssh/id_rsa.pub
 ```
 
-# Install Google Chrome [Credit] (http://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line/79284#79284)
+# Install Google Chrome [Credit](http://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line/79284#79284)
 ### 64 bit
 ```
 sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -150,22 +150,22 @@ google-chrome
 ### Skype
 ### pdfsam
 
-# Fix Skype [Credit] (http://askubuntu.com/questions/286233/how-to-add-a-skype-indicator/286436#286436)
+# Fix Skype [Credit](http://askubuntu.com/questions/286233/how-to-add-a-skype-indicator/286436#286436)
 ### To fix skype missing indicator in tray
 ```
 sudo apt-get install sni-qt:i386
 ```
 
 # Install after downloading from website
-### [Teamviewer] (https://www.teamviewer.com/en/download/linux/)
-### [GitKraken] (https://www.gitkraken.com/download)
+### [Teamviewer](https://www.teamviewer.com/en/download/linux/)
+### [GitKraken](https://www.gitkraken.com/download)
 
 
 
-Installing apache2 [Credit] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
+Installing apache2 [Credit](http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
 
 
-###### Install Java Development Kit [Credit] (http://stackoverflow.com/a/14788468)
+###### Install Java Development Kit [Credit](http://stackoverflow.com/a/14788468)
 
 # Installation
 ```
@@ -206,7 +206,7 @@ sudo /etc/init.d/apache2 restart
 ```
 
 
-Installing mariadb [Credit] (https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
+Installing mariadb [Credit](https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
 
 
 ###### Install the repo manager, if not installed (Optional)
@@ -239,7 +239,7 @@ sudo apt-get install mariadb-server
 ```
 
 
-Installing mysql [Credit1] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
+Installing mysql [Credit1](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
 
 
 ###### Install mysql
@@ -258,7 +258,7 @@ mysql > show process list;
 ```
 
 
-Installing php5 and phpmyadmin [Credit] (http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
+Installing php5 and phpmyadmin [Credit](http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
 
 
 ###### Install php5
@@ -366,7 +366,7 @@ Include /etc/phpmyadmin/apache.conf
 ###### Take ownership and hange file permissions of webrooot
 
 
-Installing nginx [Credit] (https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
+Installing nginx [Credit](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
 
 
 ###### Install nginx
@@ -385,7 +385,7 @@ System start/stop links for /etc/init.d/nginx already exist.
 ###### This just means that it was already configured correctly and that no action was necessary. Either way, your Nginx service is now configured to start up at boot time.
 
 
-Changing the default webroot for nginx / adding virtual host/s [Credit] (https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3)
+Changing the default webroot for nginx / adding virtual host/s [Credit](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3)
 
 
 ###### Add entry in hosts
@@ -480,7 +480,7 @@ sudo rm -r node_modules && npm install
 ```
 
 
-Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2] (http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3] (http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
+Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2](http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3](http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
 
 
 ###### Add i386 architecture
@@ -898,7 +898,7 @@ mysql -u root -p dbtoexport < dbtoexport.sql
 Ubuntu tricks / commands
 
 
-###### Environment Variables [Credit] (https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.profile)
+###### Environment Variables [Credit](https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.profile)
 export EDITOR=nano
 
 printenv
@@ -1067,7 +1067,7 @@ crontab -l
 crontab -e
 ```
 
-# SSH Tunneling [Credit] (http://www.revsys.com/writings/quicktips/ssh-tunnel.html)
+# SSH Tunneling [Credit](http://www.revsys.com/writings/quicktips/ssh-tunnel.html)
 
 ###### Multiport tunneling (-4 required to force IPv4 - useful for RDP, -L 23305:localhost:3305 is in the form of -L local-port:host:remote-port, -i for private key)
 ```
@@ -1075,7 +1075,7 @@ ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306  starscream@127.0.0.1
 ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306 -i private_key.pem starscream@127.0.0.1
 ```
 
-# Disk commands [Credit1] (https://en.wikipedia.org/wiki/Df_%28Unix%29) [Credit2] (https://en.wikipedia.org/wiki/Du_%28Unix%29)
+# Disk commands [Credit1](https://en.wikipedia.org/wiki/Df_%28Unix%29) [Credit2](https://en.wikipedia.org/wiki/Du_%28Unix%29)
 
 ###### Free space (Display in KB, MB, or GB)
 ```
@@ -1095,7 +1095,7 @@ du --max-depth=1 -c -h
 sudo scp starscream@127.0.0.1:/data/filetobecopied.txt /home/Desktop/
 ```
 
-# Screen [Credit1] (http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) [Credit2] (http://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
+# Screen [Credit1](http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) [Credit2](http://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
 
 ###### Installation
 ```
@@ -1122,7 +1122,7 @@ screen -r foo
 Keypress = Ctrl A D
 ```
 
-# Finding and deleting files [Credit] (http://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of-a-specific-extension-in-the-current-di)
+# Finding and deleting files [Credit](http://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of-a-specific-extension-in-the-current-di)
 
 ###### Delete all files with a specific extension (e.g. .bak) from current directory and all subfolders (Also, make sure that -delete is the last argument in your command. If you put it before the -name *.bak argument, it will delete everything.)
 ```
@@ -1134,7 +1134,7 @@ find . -name "*.bak" -type f -delete
 find . -name "*.bak" -type f
 ```
 
-# Safely uninstall ubuntu from windows dual boot PC [Credit] (http://www.makeuseof.com/tag/how-to-safely-uninstall-ubuntu-in-windows-dual-boot-environment/)
+# Safely uninstall ubuntu from windows dual boot PC [Credit](http://www.makeuseof.com/tag/how-to-safely-uninstall-ubuntu-in-windows-dual-boot-environment/)
 ###### Boot from Windows CD/DVD and choose “Repair” when it shows up. Choose command prompt on the resulting screen and run the following two commands:
 ```
 bootrec /fixmbr
