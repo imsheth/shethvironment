@@ -199,7 +199,17 @@ sudo apt-get remove openjdk-7-jdk
 sudo apt-get purge openjdk*
 ```
 
+# Java Development Kit 8 (Oracle)
 
+###### Installation [Credit](http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/)
+
+```
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install oracle-java8-installer
+javac -version
+sudo apt install oracle-java8-set-default
+```
 
 
 # Installing apache2 [Credit](http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
