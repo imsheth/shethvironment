@@ -178,20 +178,29 @@ sudo apt-get install sni-qt:i386
 ### [Teamviewer](https://www.teamviewer.com/en/download/linux/)
 ### [GitKraken](https://www.gitkraken.com/download)
 
-# Install Java Development Kit [Credit](http://stackoverflow.com/a/14788468)
+# Java Development Kit 7 (OpenJDK)
 
-###### Installation
+###### Installation [Credit](https://stackoverflow.com/questions/14788345/how-to-install-jdk-on-ubuntu-linux/14788468#14788468)
 ```
 sudo apt-get install openjdk-7-jdk
 ```
 
-###### Set variables
+###### Set variables [Credit](https://stackoverflow.com/questions/14788345/how-to-install-jdk-on-ubuntu-linux/14788468#14788468)
 ```
 echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> ".profile"
 echo "export PATH=\$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin" >> ".profile"
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin
 ```
+
+###### Safely remove [Credit](https://askubuntu.com/questions/335457/how-to-uninstall-openjdk/380300#380300)
+```
+sudo apt-get remove openjdk-7-jdk
+sudo apt-get purge openjdk*
+```
+
+
+
 
 # Installing apache2 [Credit](http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
 
