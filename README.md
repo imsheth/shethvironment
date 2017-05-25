@@ -1017,7 +1017,7 @@ sudo apt-get remove --purge nvidia*
 sudo shutdown -r now
 ```
 
-# Crontab
+### Crontab
 
 ###### List
 ```
@@ -1029,7 +1029,7 @@ crontab -l
 crontab -e
 ```
 
-# SSH Tunneling [Credit](http://www.revsys.com/writings/quicktips/ssh-tunnel.html)
+### SSH Tunneling [Credit](http://www.revsys.com/writings/quicktips/ssh-tunnel.html)
 
 ###### Multiport tunneling (-4 required to force IPv4 - useful for RDP, -L 23305:localhost:3305 is in the form of -L local-port:host:remote-port, -i for private key)
 ```
@@ -1037,7 +1037,7 @@ ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306  starscream@127.0.0.1
 ssh -4 -L 23305:localhost:3305 -L 23306:localhost:3306 -i private_key.pem starscream@127.0.0.1
 ```
 
-# Disk commands [Credit1](https://en.wikipedia.org/wiki/Df_%28Unix%29) [Credit2](https://en.wikipedia.org/wiki/Du_%28Unix%29)
+### Disk commands [Credit1](https://en.wikipedia.org/wiki/Df_%28Unix%29) [Credit2](https://en.wikipedia.org/wiki/Du_%28Unix%29)
 
 ###### Free space (Display in KB, MB, or GB)
 ```
@@ -1050,14 +1050,14 @@ df -h
 du --max-depth=1 -c -h
 ```
 
-# Secure Copy
+### Secure Copy
 
 ###### Copy file from server
 ```
 sudo scp starscream@127.0.0.1:/data/filetobecopied.txt /home/Desktop/
 ```
 
-# Screen [Credit1](http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) [Credit2](http://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
+### Screen [Credit1](http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) [Credit2](http://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
 
 ###### Installation
 ```
@@ -1084,7 +1084,7 @@ screen -r foo
 Keypress = Ctrl A D
 ```
 
-# Finding and deleting files [Credit](http://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of-a-specific-extension-in-the-current-di)
+### Finding and deleting files [Credit](http://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of-a-specific-extension-in-the-current-di)
 
 ###### Delete all files with a specific extension (e.g. .bak) from current directory and all subfolders (Also, make sure that -delete is the last argument in your command. If you put it before the -name *.bak argument, it will delete everything.)
 ```
@@ -1096,7 +1096,25 @@ find . -name "*.bak" -type f -delete
 find . -name "*.bak" -type f
 ```
 
-# Safely uninstall ubuntu from windows dual boot PC [Credit](http://www.makeuseof.com/tag/how-to-safely-uninstall-ubuntu-in-windows-dual-boot-environment/)
+### Tar files 
+
+###### List contents [Credit](https://www.cyberciti.biz/faq/list-the-contents-of-a-tar-or-targz-file/)
+```
+tar -tvf foo.tar.gz '*filenamesearchterm*'
+```
+
+###### Extract specific file [Credit](https://askubuntu.com/questions/168795/how-do-i-extract-a-specific-file-from-a-tar-archive)
+```
+tar -xf foo.tar.gz /pathtofile/filename.ext
+```
+
+### File links [Credit](https://www.lifewire.com/create-symbolic-links-ln-command-4059723)
+
+```
+ln -s /pathtofolder/foldername filename
+```
+
+### Safely uninstall ubuntu from windows dual boot PC [Credit](http://www.makeuseof.com/tag/how-to-safely-uninstall-ubuntu-in-windows-dual-boot-environment/)
 ###### Boot from Windows CD/DVD and choose “Repair” when it shows up. Choose command prompt on the resulting screen and run the following two commands:
 ```
 bootrec /fixmbr
