@@ -1114,6 +1114,14 @@ tar -xf foo.tar.gz /pathtofile/filename.ext
 ln -s /pathtofolder/foldername filename
 ```
 
+### Users
+
+###### Delete user & remove home directory [Credit](https://askubuntu.com/questions/459365/how-to-delete-a-user-its-home-folder-safely/459367#459367)
+```
+sudo userdel username
+sudo rm -r /home/username
+```
+
 ### Safely uninstall ubuntu from windows dual boot PC [Credit](http://www.makeuseof.com/tag/how-to-safely-uninstall-ubuntu-in-windows-dual-boot-environment/)
 ###### Boot from Windows CD/DVD and choose “Repair” when it shows up. Choose command prompt on the resulting screen and run the following two commands:
 ```
