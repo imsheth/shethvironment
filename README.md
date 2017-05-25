@@ -1,9 +1,9 @@
 # shethvironment
 This is the repo for ishan sheth's development environment configuration, which works fine on ubuntu 14.10. Currently a text file, which may be converted into a shell script in future, if needed.
 
-====================================================================================================
+
 Setting up ubuntu (14.10)
-====================================================================================================
+
 
 # Update and upgrade installation
 ```
@@ -161,9 +161,9 @@ sudo apt-get install sni-qt:i386
 ### [GitKraken] (https://www.gitkraken.com/download)
 
 
-====================================================================================================
+
 Installing apache2 [Credit] (http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
-====================================================================================================
+
 
 ###### Install Java Development Kit [Credit] (http://stackoverflow.com/a/14788468)
 
@@ -205,9 +205,9 @@ sudo a2enmod rewrite
 sudo /etc/init.d/apache2 restart
 ```
 
-====================================================================================================
+
 Installing mariadb [Credit] (https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
-====================================================================================================
+
 
 ###### Install the repo manager, if not installed (Optional)
 ```
@@ -238,9 +238,9 @@ sudo apt-get update
 sudo apt-get install mariadb-server
 ```
 
-====================================================================================================
+
 Installing mysql [Credit1] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
-====================================================================================================
+
 
 ###### Install mysql
 ```
@@ -257,9 +257,9 @@ sudo mysql_install_db
 mysql > show process list;
 ```
 
-====================================================================================================
+
 Installing php5 and phpmyadmin [Credit] (http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
-====================================================================================================
+
 
 ###### Install php5
 ```
@@ -307,9 +307,9 @@ sudo subl /etc/apache2/sites-enabled/000-default.conf
 Listen 80
 ```
 
-====================================================================================================
+
 Changing the default webroot for apache 2
-====================================================================================================
+
 
 ###### Include the following line in /etc/apache2/apache2.conf 
 ```
@@ -365,9 +365,9 @@ Include /etc/phpmyadmin/apache.conf
 
 ###### Take ownership and hange file permissions of webrooot
 
-====================================================================================================
+
 Installing nginx [Credit] (https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
-====================================================================================================
+
 
 ###### Install nginx
 ```
@@ -384,9 +384,9 @@ System start/stop links for /etc/init.d/nginx already exist.
 
 ###### This just means that it was already configured correctly and that no action was necessary. Either way, your Nginx service is now configured to start up at boot time.
 
-====================================================================================================
+
 Changing the default webroot for nginx / adding virtual host/s [Credit] (https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3)
-====================================================================================================
+
 
 ###### Add entry in hosts
 ```
@@ -427,9 +427,9 @@ sudo service nginx reload
 ```
 
 
-====================================================================================================
+
 Installing node.js and sails.js
-====================================================================================================
+
 
 ###### Install nodejs
 ```
@@ -479,9 +479,9 @@ sails lift
 sudo rm -r node_modules && npm install
 ```
 
-====================================================================================================
+
 Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2] (http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3] (http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
-====================================================================================================
+
 
 ###### Add i386 architecture
 ```
@@ -587,9 +587,9 @@ ionic platform add android
 ionic build android
 ```
 
-====================================================================================================
+
 Bower
-====================================================================================================
+
 
 ###### Installing bower
 ```
@@ -611,9 +611,9 @@ bower install <package> --save
 bower install <package> --save-dev
 ```
 
-====================================================================================================
+
 Gulp [Credit1](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/) [Credit2](https://markgoodyear.com/2014/01/getting-started-with-gulp/) [Credit3](http://slides.com/contra/gulp#/)
-====================================================================================================
+
 
 ###### Install gulp globally
 ```
@@ -702,27 +702,27 @@ gulp.task('default', ['clean'], function() {
 gulp
 ```
 
-====================================================================================================
+
 Grunt
-====================================================================================================
+
 
 ###### Install grunt cli
 ```
 sudo npm install -g grunt-cli --verbose
 ```
 
-====================================================================================================
+
 Yeoman
-====================================================================================================
+
 
 ###### Install yeoman
 ```
 sudo npm install -g yo --verbose
 ```
 
-====================================================================================================
+
 Stylus
-====================================================================================================
+
 
 ###### Install stylus
 ```
@@ -739,18 +739,18 @@ stylus -c file.styl
 stylus file.styl
 ```
 
-====================================================================================================
+
 AngularJS
-====================================================================================================
+
 
 ###### Installing angularjs
 ```
 bower install angular
 ```
 
-====================================================================================================
+
 Composer
-====================================================================================================
+
 
 ###### Downloading and installing composer
 ```
@@ -773,9 +773,9 @@ sudo composer install --verbose
 sudo composer update --verbose
 ```
 
-====================================================================================================
+
 Laravel
-====================================================================================================
+
 
 ###### Enabling/disabling maintenance mode
 ```
@@ -794,9 +794,9 @@ php artisan serve --port=8001
 php artisan vendor:publish
 ```
 
-====================================================================================================
+
 Couchdb [Credit1](http://devgirl.org/2014/12/30/sync-data-using-pouchdb-in-your-ionic-framework-app/) [Credit2](https://github.com/apache/couchdb-fauxton)
-====================================================================================================
+
 
 ###### Install couchdb
 ```
@@ -833,9 +833,9 @@ sudo service couchdb stop
 sudo service couchdb restart
 ```
 
-====================================================================================================
+
 Infinidb export database to remote server
-====================================================================================================
+
 
 ###### Generate sql dump on source server
 ```
@@ -862,9 +862,9 @@ tar -zxvf dbtoexport.tar.gz
 idbmysql  dbtoexport < dbtoexport.sql
 ```
 
-====================================================================================================
+
 MySQL export database to remote server
-====================================================================================================
+
 
 ###### Generate sql dump on source server
 ```
@@ -894,9 +894,9 @@ mysql -u root -p dbtoexport < dbtoexport.sql
 ```
 
 
-====================================================================================================
+
 Ubuntu tricks / commands
-====================================================================================================
+
 
 ###### Environment Variables [Credit] (https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.profile)
 export EDITOR=nano
