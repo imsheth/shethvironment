@@ -906,6 +906,17 @@ sudo setEnfoce 0
 cc startSystem
 ```
 
+# Infinidb common tweaks [Credit](https://github.com/infinidb/infinidb/issues/9)
+
+###### Edit my.cnf
+```
+sudo vim /usr/local/Calpont/mysql/my.cnf
+
+# Change following values
+max_allowed_packet= 64MB
+max_length_for_sort_data= 8388608
+```
+
 # MySQL export database to remote server
 
 ###### Generate sql dump on source server
