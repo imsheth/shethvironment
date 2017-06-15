@@ -863,6 +863,49 @@ tar -zxvf dbtoexport.tar.gz
 idbmysql  dbtoexport < dbtoexport.sql
 ```
 
+# Change data directory in Infinidb (CentOS) (Credit)[https://survivalguides.wordpress.com/2011/06/03/moving-dbdata-data1/]
+
+###### Stop Infinidb
+```
+cc stopSystem
+```
+
+###### Copy existing database directories or new ones to pathtofolder which is the new path
+```
+cp /usr/local/Calpont/mysql/db /pathtofolder/
+cp /usr/local/Calpont/data /pathtofolder/
+cp /usr/local/Calpont/data1 /pathtofolder/
+```
+
+###### Assign ownership (same ownership and permission as existing, defaults to mysql:mysql)
+```
+chown -R mysql:mysql  /pathtofolder/data
+chown -R mysql:mysql  /pathtofolder/db
+chown -R mysql:mysql  /pathtofolder/data1
+```
+
+###### Link folders
+```
+ln -s /pathtofolder/db /usr/local/Calpont/mysql/db
+ln -s /pathtofolder/data /usr/local/Calpont/data
+ln -s /pathtofolder/data1 /usr/local/Calpont/data1
+```
+
+###### Check selinux status
+```
+getEnforce
+```
+
+###### Disable setEnfoce, if enabled
+```
+sudo setEnfoce 0
+```
+
+###### Stop Infinidb
+```
+cc startSystem
+```
+
 # MySQL export database to remote server
 
 ###### Generate sql dump on source server
