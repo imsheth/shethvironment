@@ -967,6 +967,17 @@ sudo /etc/init.d/apparmor reload
 sudo /etc/init.d/mysql restart
 ```
 
+# Backing up specific database backup for Mysql and Infinidb
+
+###### Shell script
+```
+now=$(date +"%Y%m%d_%H%M%S")
+mysqlFileName="mysqldbname"$now".sql"
+mysqldump  -u root -p root mysqldbname > $mysqlFileName
+infinidbFileName="infinidbdbname"$now".sql"
+mysqldump  --defaults-file=/usr/local/Calpont/mysql/my.cnf -u root infinidbdbname > $infinidbFileName
+```
+
 # MySQL skip-hostname resolution [Credit](http://www.vionblog.com/skip-name-resolve-to-speed-up-mysql-and-avoid-problems/)
 
 ###### Add skip-name-resolve to speed up MySQL and avoid problems
