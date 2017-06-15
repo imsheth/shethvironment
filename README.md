@@ -270,7 +270,7 @@ sudo apt-get update
 sudo apt-get install mariadb-server
 ```
 
-# Installing mysql [Credit1](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
+# Installing mysql [Credit1](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04) [Credit3](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04) [Credit4 - MySQL 5.7.9 on RHEL/CentOS 7/6/5 and Fedora 23/22/21](https://www.tecmint.com/install-latest-mysql-on-rhel-centos-and-fedora/)
 
 ###### Install mysql
 ```
@@ -891,6 +891,55 @@ tar -zxvf dbtoexport.tar.gz
 mysql -u root -p dbtoexport < dbtoexport.sql
 
 ```
+
+# Change data directory in MySQL (CentOS)
+
+###### Stop MySQL
+```
+sudo /etc/init.d/mysql stop
+```
+
+###### Copy the existing data directory (default located in /var/lib/mysql)
+```
+sudo cp -R -p /var/lib/mysql /pathtofolder
+```
+
+###### Edit the MySQL configuration file, change the datadir path (default /var/lib/mysql) to the new data directory
+```
+sudo vim /etc/mysql/my.cnf
+```
+
+###### Edit apparmor profile, find and replace /var/lib/mysql (default path) with the new path to directory
+```
+sudo vim /etc/apparmor.d/usr.sbin.mysqld
+```
+
+###### Restart the AppArmor profiles
+```
+sudo /etc/init.d/apparmor reload
+```
+
+###### Restart MySQL
+```
+sudo /etc/init.d/mysql restart
+```
+
+# MySQL skip-hostname resolution [Credit](http://www.vionblog.com/skip-name-resolve-to-speed-up-mysql-and-avoid-problems/)
+
+###### Add skip-name-resolve to speed up MySQL and avoid problems
+```
+sudo vim /etc/mysql/my.cnf
+
+# Skip reverse DNS lookup of clients
+skip-name-resolve
+```
+
+###### Restart MySQL
+```
+sudo /etc/init.d/mysql restart
+```
+
+# MySQL regex replace [Credit](https://techras.wordpress.com/2011/06/02/regex-replace-for-mysql/)
 
 # Ubuntu tricks / commands [Master Reference](https://github.com/Idnan/bash-guide)
 
