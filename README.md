@@ -123,7 +123,7 @@ sudo apt-get install ubuntu-restricted-extras
 sudo apt-get install flashplugin-installer
 ```
 
-# Generate public ssh key
+# Generate public ssh key [Credit-SSH Key-Based Authentication on a Linux Server](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
 ```
 ssh-keygen -t rsa -b 2048 -C "contact@imsheth.com"
 ls ~/.ssh/*.pub
@@ -863,7 +863,7 @@ tar -zxvf dbtoexport.tar.gz
 idbmysql  dbtoexport < dbtoexport.sql
 ```
 
-# Change data directory in Infinidb (CentOS) (Credit)[https://survivalguides.wordpress.com/2011/06/03/moving-dbdata-data1/]
+# Change data directory in Infinidb (CentOS) [Credit](https://survivalguides.wordpress.com/2011/06/03/moving-dbdata-data1/)
 
 ###### Stop Infinidb
 ```
@@ -1254,4 +1254,16 @@ sudo rm -r /home/username
 ```
 bootrec /fixmbr
 bootrec /fixboot
+```
+
+### New file permissions to inherit from parent directory [Credit](https://superuser.com/questions/151911/how-to-make-new-file-permission-inherit-from-the-parent-directory)
+
+### Raising the maximum number of file descriptors [Credit](https://underyx.me/2015/05/18/raising-the-maximum-number-of-file-descriptors)
+
+### Allow SFTP (CentOS) [Credit](https://www.digitalocean.com/community/questions/sftp-connection-error-received-unexpected-end-of-file-from-sftp-server)
+```
+sudo vim /etc/ssh/sshd_config
+# Add “Subsystem sftp internal-sftp”
+
+service sshd restart
 ```
