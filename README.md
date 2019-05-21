@@ -1,5 +1,5 @@
 # shethvironment
-This is the repo for ishan sheth's development environment configuration, which works fine on ubuntu 14.10. Currently a text file, which may be converted into a shell script in future, if needed.
+This is the repo for updating my current pc configuration, works for ubuntu 14.10 and macOS 10.12.6 (where specified)
 
 
 Setting up ubuntu (14.10)
@@ -1277,4 +1277,31 @@ sudo vim /etc/ssh/sshd_config
 # Add “Subsystem sftp internal-sftp”
 
 service sshd restart
+```
+
+# macOS 10.12.6
+
+### Increase ulimit
+
+```
+sudo launchctl limit maxfiles unlimited
+```
+
+### Install pip [Credit](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
+
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py --user
+```
+
+### Setting environment variables
+
+```
+vim ~/.bash_profile
+```
+
+##### Add export PATH=${PATH}:/Users/ishansheth/Library/Python/2.7/bin to bash_profile and then export for current session
+
+```
+export PATH=${PATH}:/Users/ishansheth/Library/Python/2.7/bin
 ```
