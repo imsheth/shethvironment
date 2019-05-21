@@ -1281,7 +1281,7 @@ service sshd restart
 
 # macOS 10.12.6
 
-### Increase ulimit
+### Increase ulimit [Credit](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-on-macos)
 
 ```
 sudo launchctl limit maxfiles unlimited
