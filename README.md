@@ -1300,8 +1300,21 @@ python get-pip.py --user
 vim ~/.bash_profile
 ```
 
-##### Add export PATH=${PATH}:/Users/ishansheth/Library/Python/2.7/bin to bash_profile and then export for current session
+##### Add export PATH=${PATH}:/Users/ishansheth/Library/Python/2.7/bin to bash_profile and then export for current session and then check version to verify installation
 
 ```
 export PATH=${PATH}:/Users/ishansheth/Library/Python/2.7/bin
+pip --version
 ```
+
+### Install maven [Credit](https://stackoverflow.com/a/19002869/3152654)
+
+##### Download zip from [here](https://maven.apache.org/download.cgi) and add it to path and then check version to verify installation
+
+```
+vim ~/.bash_profile
+export MAVEN_HOME="/Users/ishan/public_html/apache-maven-3.6.0"
+export PATH=${PATH}:${MAVEN_HOME}/bin
+mvn -version
+```
+
