@@ -573,6 +573,26 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin >> ~/.bash_profile
 export PATH=$PATH:$ANDROID_HOME/platform-tools >> ~/.bash_profile
 ```
 
+# Install [Realm](https://realm.io/) on macOS 10.15.3 
+
+###### Install realm object server
+```
+npm install -g realm-object-server
+# If it gives
+“ERROR:root:code for hash md5 was not found”
+# Then [Credit](https://stackoverflow.com/a/60894282/3152654)
+brew unlink openssl
+brew reinstall python@2
+brew link --overwrite python@2
+python -v
+python --version
+brew link --overwrite python@2
+ls /usr/local/Cellar/openssl
+brew switch openssl 1.0.2o_2
+```
+
+If you have trouble running a ros command it may be due to your version of NVM. Try running nvm use 8 in your terminal. [Credit] (https://github.com/realm/realm-object-server/issues/435#issuecomment-578016209)
+
 # Installing node.js and sails.js
 
 ###### Install nodejs
