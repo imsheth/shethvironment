@@ -10,13 +10,13 @@ Setting up ubuntu (14.10)
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-# Install python software properties
+# Python software properties
 ```
 sudo apt-get install python-software-properties
 sudo apt-get install -y python-software-properties python g++ make
 ```
 
-# Install sublime text 3
+# Sublime text 3
 
 ###### Installation
 
@@ -41,7 +41,7 @@ type prettify, select DocBlockr
 type prettify, select Babel
 ```
 
-# Install gufw
+# GUFW
 ```
 sudo apt-get install gufw
 ```
@@ -56,43 +56,43 @@ gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-ama
 sudo apt-get autoremove unity-lens-shopping
 ```
 
-# Install rar
+# RAR
 ```
 sudo apt-get install rar
 ```
 
-# Install git
+# GIT
 ```
 sudo apt-get update
 sudo apt-get install git
 ```
 
-# Install curl
+# CURL
 ```
 sudo apt-get install curl
 ```
 
-# Install guake
+# GUAKE
 ```
 sudo apt-get install guake
 ```
 
-# Install gksu (GKSu is a library that provides a Gtk+ frontend to su and sudo)
+# GKSu (GKSu is a library that provides a Gtk+ frontend to su and sudo)
 ```
 sudo apt-get install gksu
 ```
 
-# Install System Load Indicator
+# System Load Indicator
 ```
 sudo apt-get install indicator-multiload
 ```
 
-# Install Gpick
+# Gpick
 ```
 sudo apt-get install gpick
 ```
 
-# Install Filezilla
+# Filezilla
 ```
 sudo apt-get install filezilla
 ```
@@ -106,19 +106,19 @@ cd /etc/gconf/schemas/
 sudo ln -s /usr/share/gconf/schemas/guake.schemas
 ```
 
-# Install Atom (Optional)
+# Atom (Optional)
 ```
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install atom
 ```
 
-# Install restricted extras for media codecs (Optional)
+# Restricted extras for media codecs (Optional)
 ```
 sudo apt-get install ubuntu-restricted-extras 
 ```
 
-# Install flash plugin (Optional)
+# Flash plugin (Optional)
 ```
 sudo apt-get install flashplugin-installer
 ```
@@ -130,7 +130,7 @@ ls ~/.ssh/*.pub
 cat ~/.ssh/id_rsa.pub
 ```
 
-# Install Google Chrome [Credit](http://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line/79284#79284)
+# Google Chrome [Credit](http://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line/79284#79284)
 ### 64 bit
 ```
 sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -212,7 +212,7 @@ sudo apt install oracle-java8-set-default
 ```
 
 
-# Installing apache2 [Credit](http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
+# Apache2 [Credit](http://www.maketecheasier.com/install-and-configure-apache-in-ubuntu/)
 
 ```
 sudo apt-get install apache2
@@ -239,7 +239,7 @@ sudo /etc/init.d/apache2 restart
 ```
 
 
-# Installing mariadb [Credit](https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
+# MariaDB [Credit](https://downloads.mariadb.org/mariadb/repositories/#mirror=bytenet&distro=Ubuntu&version=10.0&distro_release=utopic--ubuntu_utopic)
 
 ###### Install the repo manager, if not installed (Optional)
 ```
@@ -270,7 +270,7 @@ sudo apt-get update
 sudo apt-get install mariadb-server
 ```
 
-# Installing mysql [Credit1](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04) [Credit3](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04) [Credit4 - MySQL 5.7.9 on RHEL/CentOS 7/6/5 and Fedora 23/22/21](https://www.tecmint.com/install-latest-mysql-on-rhel-centos-and-fedora/)
+# MySQL [Credit1](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04) [Credit2](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04) [Credit3](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04) [Credit4 - MySQL 5.7.9 on RHEL/CentOS 7/6/5 and Fedora 23/22/21](https://www.tecmint.com/install-latest-mysql-on-rhel-centos-and-fedora/)
 
 ###### Install mysql
 ```
@@ -287,7 +287,7 @@ sudo mysql_install_db
 mysql > show process list;
 ```
 
-# Installing php5 and phpmyadmin [Credit](http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
+# PHP5 and phpmyadmin [Credit](http://www.rosehosting.com/blog/how-to-set-up-lamp-linux-apache-mariadb-php-stack-on-debian-wheezy/)
 
 ###### Install php5
 ```
@@ -393,7 +393,7 @@ Include /etc/phpmyadmin/apache.conf
 
 ###### Take ownership and hange file permissions of webrooot
 
-# Installing nginx [Credit](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
+# Nginx [Credit](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-14-04-lts)
 
 ###### Install nginx
 ```
@@ -452,7 +452,7 @@ sudo ln -s example /etc/nginx/sites-available/example
 sudo service nginx reload
 ```
 
-# Installing nvm on macOS 10.15.3 [Credit](https://itnext.io/nvm-the-easiest-way-to-switch-node-js-environments-on-your-machine-in-a-flash-17babb7d5f1b)
+# NVM on macOS 10.15.3 [Credit](https://itnext.io/nvm-the-easiest-way-to-switch-node-js-environments-on-your-machine-in-a-flash-17babb7d5f1b)
 
 ###### Install nvm
 ```
@@ -514,7 +514,7 @@ nvm use node
 nvm use <SPECIFIC_NODE_VERSION>
 ```
 
-# Installing react-native on macOS 10.15.3 [Credit](https://reactnative.dev/docs/environment-setup)
+# React Native on macOS 10.15.3 [Credit](https://reactnative.dev/docs/environment-setup)
 
 ###### Know your JDK flavor [Credit](https://stackoverflow.com/a/33895235/3152654)
 ```
@@ -573,7 +573,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin >> ~/.bash_profile
 export PATH=$PATH:$ANDROID_HOME/platform-tools >> ~/.bash_profile
 ```
 
-# Install [Realm](https://realm.io/) on macOS 10.15.3 
+# [Realm](https://realm.io/) on macOS 10.15.3 
 
 ###### Install realm object server
 ```
@@ -593,7 +593,7 @@ brew switch openssl 1.0.2o_2
 
 If you have trouble running a ros command it may be due to your version of NVM. Try running nvm use 8 in your terminal. [Credit] (https://github.com/realm/realm-object-server/issues/435#issuecomment-578016209)
 
-# Installing node.js and sails.js
+# Node.js and sails.js
 
 ###### Install nodejs
 ```
@@ -643,7 +643,7 @@ sails lift
 sudo rm -r node_modules && npm install
 ```
 
-# Installing ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2](http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3](http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
+# Ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2](http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3](http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
 
 ###### Add i386 architecture
 ```
