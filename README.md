@@ -452,6 +452,68 @@ sudo ln -s example /etc/nginx/sites-available/example
 sudo service nginx reload
 ```
 
+# Installing nvm on macOS 10.15.3 [Credit](https://itnext.io/nvm-the-easiest-way-to-switch-node-js-environments-on-your-machine-in-a-flash-17babb7d5f1b)
+
+###### Install nvm
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+###### Load nvm
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
+
+###### Verify NVM
+```
+command -v nvm
+# gives
+nvm
+```
+
+###### List all available LTS versions of Node.js
+```
+nvm ls-remote
+```
+
+###### List all installed versions of Node.js available locally on your machine
+```
+nvm ls
+```
+
+###### Add the NVM Directory Paths to Your Shell Profile
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion >> ~/.bash_profile
+```
+
+###### How to reload .bash_profile from the command line? [Credit](https://stackoverflow.com/a/4608197/3152654)
+```
+source ~/.bash_profile
+```
+
+###### Install the latest version of Node.js to your machine
+```
+nvm install node
+```
+
+###### Install the specified version of Node.js to your machine
+```
+nvm install <SPECIFIC_NODE_VERSION>
+```
+
+###### Set the version of Node.js running locally to the latest version downloaded
+```
+nvm use node
+```
+
+###### Set the version of Node.js running locally to the version specified
+```
+nvm use <SPECIFIC_NODE_VERSION>
+```
+
 # Installing node.js and sails.js
 
 ###### Install nodejs
