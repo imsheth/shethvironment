@@ -940,6 +940,58 @@ php artisan serve --port=8001
 php artisan vendor:publish
 ```
 
+# MongoDB community edition on macOS 10.15.3 [Credit](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+
+##### Prerequisites
+1) XCode
+2) Homebrew
+
+##### Tap the MongoDB Homebrew Tap
+```
+brew tap mongodb/brew
+```
+
+##### Install MongoDB Community Edition
+```
+brew install mongodb-community@4.2
+```
+
+In addition to the binaries, the install creates:
+- the configuration file (/usr/local/etc/mongod.conf)
+- the log directory path (/usr/local/var/log/mongodb)
+- the data directory path (/usr/local/var/mongodb)
+
+##### To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:
+```
+brew services start mongodb-community@4.2
+```
+
+##### To stop a mongod running as a macOS service, use the following command as needed:
+```
+brew services stop mongodb-community@4.2
+```
+
+##### To run MongoDB (i.e. the mongod process) manually as a background process, issue the following:
+```
+mongod --config /usr/local/etc/mongod.conf --fork
+```
+
+##### To stop a mongod running as a background process, connect to the mongod from the mongo shell, and issue the shutdown command as needed.
+##### To verify that MongoDB is running, search for mongod in your running processes:
+```
+ps aux | grep -v grep | grep mongod
+```
+
+##### You can also view the log file to see the current status of your mongod process:
+```
+/usr/local/var/log/mongodb/mongo.log.
+```
+
+##### Connect and Use MongoDB
+```
+mongo
+```
+
 # Couchdb [Credit1](http://devgirl.org/2014/12/30/sync-data-using-pouchdb-in-your-ionic-framework-app/) [Credit2](https://github.com/apache/couchdb-fauxton)
 
 ###### Install couchdb
