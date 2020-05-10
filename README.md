@@ -468,7 +468,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ###### Verify NVM
 ```
 command -v nvm
-# gives
+# Gives
 nvm
 ```
 
@@ -482,14 +482,14 @@ nvm ls-remote
 nvm ls
 ```
 
-###### Add the NVM Directory Paths to Your Shell Profile
+###### Add paths to your shell profile
 ```
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion >> ~/.bash_profile
 ```
 
-###### How to reload .bash_profile from the command line? [Credit](https://stackoverflow.com/a/4608197/3152654)
+###### Reload .bash_profile from the command line [Credit](https://stackoverflow.com/a/4608197/3152654)
 ```
 source ~/.bash_profile
 ```
@@ -512,6 +512,65 @@ nvm use node
 ###### Set the version of Node.js running locally to the version specified
 ```
 nvm use <SPECIFIC_NODE_VERSION>
+```
+
+# Installing react-native on macOS 10.15.3 [Credit](https://reactnative.dev/docs/environment-setup)
+
+###### Know your JDK flavor [Credit](https://stackoverflow.com/a/33895235/3152654)
+```
+java -version
+# Gives following for oracle
+java version "1.8.0_172"
+Java(TM) SE Runtime Environment (build 1.8.0_172-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.172-b11, mixed mode)
+```
+
+###### If you have already installed JDK on your system, make sure it is JDK 8 or newer
+```
+brew cask install adoptopenjdk/openjdk/adoptopenjdk8
+```
+
+###### Install Android
+```
+brew install watchman
+# If it gives following error
+  Updating Homebrew...
+  Error: The following formula
+    [#<Dependency: "python@3.8" []>, #<Options: []>]
+  cannot be installed as binary package and must be built from source.
+  Install the Command Line Tools:
+    xcode-select --install
+# Then execute below commands
+xcode-select --install
+brew install watchman
+
+```
+
+###### Install Android Developer Studio [Credit](https://developer.android.com/studio)
+
+###### "Custom" setup
+###### 1) Android SDK
+###### 2) Android SDK Platform
+###### 3) Performance (Intel ® HAXM) (See here for AMD)
+###### 4) Android Virtual Device
+###### 5) Set home
+``` 
+ls -l /Library/Java
+# Gives
+/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
+```
+###### 6) Android 9 (Pie)
+###### 7) Android SDK Platform 28
+###### 8) Intel x86 Atom_64 System Image or Google APIs Intel x86 Atom System Image
+###### 9) Next, select the "SDK Tools" tab and check the box next to "Show Package Details" here as well. Look for and expand the "Android SDK Build-Tools" entry, then make sure that 28.0.3 is selected.
+
+###### Add paths to your shell profile
+```
+export ANDROID_HOME=$HOME/Library/Android/sdk >> ~/.bash_profile
+export PATH=$PATH:$ANDROID_HOME/emulator >> ~/.bash_profile
+export PATH=$PATH:$ANDROID_HOME/tools >> ~/.bash_profile
+export PATH=$PATH:$ANDROID_HOME/tools/bin >> ~/.bash_profile
+export PATH=$PATH:$ANDROID_HOME/platform-tools >> ~/.bash_profile
 ```
 
 # Installing node.js and sails.js
