@@ -643,6 +643,21 @@ sails lift
 sudo rm -r node_modules && npm install
 ```
 
+# Jmeter
+
+###### Install Jmeter, prerequisite - Java
+```
+brew install jmeter
+jmeter
+```
+
+###### Testing with Jmeter
+[Reference1](https://www.guru99.com/jmeter-performance-testing.html)
+[Reference2](https://medium.com/@harrietty/load-testing-an-api-with-apache-benchmark-or-jmeter-24cfe39d3a23#:~:text=JMeter%20is%20a%20more%20powerful,which%20is%20much%20more%20realistic.)
+[Reference3](https://www.blazemeter.com/blog/using-jmeters-http-header-manager)
+[Reference4](https://developers.redhat.com/blog/2015/04/30/how-to-load-test-and-tune-performance-on-your-api/)
+
+
 # Ionic framework for x68_64 [Credit1](https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/) [Credit2](http://askubuntu.com/questions/554045/java-home-is-set-to-the-wrong-directory) [Credit3](http://askubuntu.com/questions/175514/how-to-set-java-home-for-java)
 
 ###### Add i386 architecture
